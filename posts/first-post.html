@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开始我的技术博客之旅 - YuChen</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-header {
+            margin-bottom: 3rem;
+        }
+        .article-header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            align-items: center;
+        }
+        .article-body {
+            line-height: 1.9;
+            color: var(--text-secondary);
+        }
+        .article-body h2 {
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+        .article-body ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">YuChen</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="../index.html">Blog</a>
+                    <a href="../about.html">About</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-container">
+        <div class="article-header">
+            <h1>开始我的技术博客之旅</h1>
+            <div class="article-meta">
+                <time>Mar 6, 2026</time>
+                <span>·</span>
+                <span>📖 2 分钟阅读</span>
+                <span>·</span>
+                <span>📝 随笔</span>
+            </div>
+        </div>
+        
+        <div class="article-body">
+            <p>终于，我的个人博客上线了。虽然只是一个简单的静态站点，但它标志着我正式开始记录和分享自己的技术学习历程。</p>
+            
+            <h2>为什么要写博客？</h2>
+            <p>一直以来我都觉得写博客是一件很有价值的事情。它不仅帮助自己整理思路，还能与他人分享经验。当你把学到的东西用自己的话写出来时，你会发现理解变得更深了。</p>
+            
+            <h2>这个博客会写什么？</h2>
+            <p>主要会围绕以下几个方向：</p>
+            <ul>
+                <li>前端开发技术分享</li>
+                <li>项目实战经验总结</li>
+                <li>学习路线和资源推荐</li>
+                <li>偶尔的生活随笔</li>
+            </ul>
+            
+            <h2>技术选型</h2>
+            <p>这个博客使用纯 HTML/CSS/JavaScript 构建，部署在 GitHub Pages 上。我选择这种方式是因为它简单、轻量、而且不需要任何后端服务。</p>
+            
+            <p>未来如果有更多需求，可能会迁移到 Next.js 或其他静态站点生成器。但现在，简单就好。</p>
+            
+            <p>希望这个小小的角落，能成为我成长路上的一面镜子。</p>
+            
+            <a href="../index.html" class="back-link">← 返回首页</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© <a href="../about.html">YuChen</a> 2024 - 2026</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

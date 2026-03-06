@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuChen - 个人博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">YuChen</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="index.html">Blog</a>
+                    <a href="about.html">About</a>
+                    <a href="#" onclick="alert('RSS 功能开发中')">RSS</a>
+                    <a href="#" onclick="alert('搜索功能开发中')">Search</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="posts-list">
+            <article class="post-card">
+                <div class="post-header">
+                    <a href="posts/first-post.html" class="post-title">开始我的技术博客之旅</a>
+                    <time class="post-date">Mar 6, 2026</time>
+                </div>
+                <div class="post-content">
+                    <p class="post-excerpt">记录学习历程，分享技术心得，这是我的第一篇博客文章。</p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">📝 随笔</span>
+                            <span class="tag">🚀 开始</span>
+                        </div>
+                        <span class="read-time">📖 2 分钟阅读</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <div class="post-header">
+                    <a href="posts/web-dev-journey.html" class="post-title">前端开发学习路线分享</a>
+                    <time class="post-date">Mar 5, 2026</time>
+                </div>
+                <div class="post-content">
+                    <p class="post-excerpt">从零基础到独立开发，我的前端学习经验总结。</p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">🛠️ 技术</span>
+                            <span class="tag">🔗 分享</span>
+                        </div>
+                        <span class="read-time">📖 5 分钟阅读</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <div class="post-header">
+                    <a href="posts/github-pages-guide.html" class="post-title">GitHub Pages 部署指南</a>
+                    <time class="post-date">Mar 4, 2026</time>
+                </div>
+                <div class="post-content">
+                    <p class="post-excerpt">手把手教你如何将静态网站部署到 GitHub Pages。</p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">🛠️ 技术</span>
+                            <span class="tag">📚 教程</span>
+                        </div>
+                        <span class="read-time">📖 4 分钟阅读</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <div class="post-header">
+                    <a href="posts/css-tips.html" class="post-title">CSS 实用技巧集锦</a>
+                    <time class="post-date">Mar 3, 2026</time>
+                </div>
+                <div class="post-content">
+                    <p class="post-excerpt">收集整理的 CSS 小技巧，让你的页面更加精致。</p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">🛠️ 技术</span>
+                            <span class="tag">💡 技巧</span>
+                        </div>
+                        <span class="read-time">📖 3 分钟阅读</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <div class="post-header">
+                    <a href="posts/daily-thoughts.html" class="post-title">三月随笔</a>
+                    <time class="post-date">Mar 2, 2026</time>
+                </div>
+                <div class="post-content">
+                    <p class="post-excerpt">春天来了，记录一些生活中的小确幸。</p>
+                    <div class="post-meta">
+                        <div class="post-tags">
+                            <span class="tag">📝 随笔</span>
+                            <span class="tag">👤 个人</span>
+                        </div>
+                        <span class="read-time">📖 2 分钟阅读</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© <a href="about.html">YuChen</a> 2024 - 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
