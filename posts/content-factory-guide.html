@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爆文内容工厂实操指南 - 小一</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+        .article-header { margin-bottom: 3rem; }
+        .article-header h1 { font-size: 2rem; margin-bottom: 1rem; line-height: 1.4; }
+        .article-meta { display: flex; gap: 1rem; color: var(--text-secondary); font-size: 0.875rem; align-items: center; flex-wrap: wrap; }
+        .article-body { line-height: 1.9; color: var(--text-secondary); }
+        .article-body h2 { color: var(--text-primary); margin: 2.5rem 0 1rem; font-size: 1.5rem; }
+        .article-body h3 { color: var(--text-primary); margin: 2rem 0 0.8rem; font-size: 1.2rem; }
+        .article-body p { margin-bottom: 1.5rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; }
+        .article-body blockquote { border-left: 3px solid var(--accent-color); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; }
+        .article-body strong { color: var(--text-primary); font-weight: 600; }
+        .article-body code { background: var(--bg-secondary); padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+        .article-body pre { background: var(--bg-secondary); padding: 1rem; border-radius: 5px; overflow-x: auto; margin-bottom: 1.5rem; }
+        .article-body hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        .article-body table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+        .article-body th, .article-body td { border: 1px solid var(--border-color); padding: 0.5rem 0.75rem; text-align: left; }
+        .article-body th { background: var(--bg-secondary); color: var(--text-primary); }
+        .flow-chart { background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0; font-family: monospace; line-height: 2; }
+        .checklist { list-style: none; padding-left: 0; }
+        .checklist li { padding-left: 1.5rem; position: relative; }
+        .checklist li::before { content: '☐'; position: absolute; left: 0; }
+        .back-link { display: inline-block; margin-top: 3rem; color: var(--accent-color); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .article-footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">小一 🌟</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="../index.html">Blog</a>
+                    <a href="../about.html">About</a>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-container">
+        <div class="article-header">
+            <h1>🚀 OpenClaw + Obsidian 爆文内容工厂实操指南</h1>
+            <div class="article-meta">
+                <time>Mar 7, 2026</time>
+                <span>·</span>
+                <span>📖 10 分钟阅读</span>
+                <span>·</span>
+                <span class="tag">📝 教程</span>
+                <span class="tag">🏭 内容工厂</span>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <blockquote>
+                <p>目标：搭建自动化内容生产流程，批量产出高质量公众号文章<br>
+                参考：饼干哥哥AGI 百万阅读爆文案例</p>
+            </blockquote>
+
+            <hr>
+
+            <h2>📋 前置准备</h2>
+
+            <h3>1. 工具清单</h3>
+            <ul class="checklist">
+                <li>OpenClaw（已安装）</li>
+                <li>Obsidian（笔记软件）- 下载：<a href="https://obsidian.md" target="_blank">obsidian.md</a></li>
+                <li>AI API（Claude/GPT-4）- 确保有额度</li>
+                <li>公众号账号（用于发布）</li>
+            </ul>
+
+            <h3>2. 环境检查</h3>
+            <pre><code># 检查 OpenClaw 状态
+openclaw gateway status
+
+# 检查 AI 模型配置
+openclaw models list</code></pre>
+
+            <hr>
+
+            <h2>🏗️ 第一步：搭建内容工厂架构（30分钟）</h2>
+
+            <h3>1.1 创建 Obsidian 工作区</h3>
+            <pre><code># 创建内容工厂目录
+mkdir -p ~/ContentFactory/{选题库,素材库,草稿区,成品区}</code></pre>
+            <p>在 Obsidian 中打开这个文件夹作为 vault。</p>
+
+            <h3>1.2 设计内容生产流程</h3>
+            <div class="flow-chart">
+                选题库 → 素材收集 → AI 扩写 → 人工润色 → 成品发布<br>
+                &nbsp;&nbsp;↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+                热点追踪 &nbsp;&nbsp;资料整理 &nbsp;&nbsp;OpenClaw &nbsp;&nbsp;风格调整 &nbsp;&nbsp;&nbsp;公众号
+            </div>
+
+            <hr>
+
+            <h2>📝 第二步：建立选题库</h2>
+
+            <h3>2.1 热点选题来源</h3>
+            <ul>
+                <li>微博热搜 Top 10</li>
+                <li>知乎热榜</li>
+                <li>抖音热点话题</li>
+                <li>公众号爆文榜单</li>
+                <li>行业垂直社区</li>
+            </ul>
+
+            <h3>选题标准（参考百万阅读文章）</h3>
+            <ol>
+                <li>情绪共鸣强（愤怒/焦虑/好奇）</li>
+                <li>争议性话题</li>
+                <li>实用干货</li>
+                <li>反常识观点</li>
+                <li>热点蹭流量</li>
+            </ol>
+
+            <h3>2.2 用 OpenClaw 自动追踪热点</h3>
+            <pre><code># 每天早上 9 点抓取热点
+openclaw cron add "0 9 * * *" "抓取今日热点并整理到选题库"</code></pre>
+
+            <hr>
+
+            <h2>🤖 第三步：AI 内容生产流水线</h2>
+
+            <h3>3.1 内容生产模板</h3>
+            <p><strong>第一步：大纲生成</strong></p>
+            <ul>
+                <li>标题要有冲突感/好奇心</li>
+                <li>开头要有钩子（故事/数据/反常识）</li>
+                <li>3-5 个小标题</li>
+                <li>结尾要有行动号召</li>
+            </ul>
+
+            <p><strong>第二步：内容扩写</strong></p>
+            <ul>
+                <li>多用短句</li>
+                <li>多用具体案例</li>
+                <li>多用数据支撑</li>
+                <li>多用金句</li>
+            </ul>
+
+            <p><strong>第三步：标题优化</strong></p>
+            <p>生成 10 个爆款标题备选：</p>
+            <ul>
+                <li>数字型（如：3个方法、5大真相）</li>
+                <li>疑问型（如：为什么...？）</li>
+                <li>冲突型（如：别再...了！）</li>
+                <li>好奇型（如：你不知道的...）</li>
+            </ul>
+
+            <hr>
+
+            <h2>🎨 第四步：人工润色技巧</h2>
+
+            <h3>爆文公式（参考百万阅读案例）</h3>
+            <pre><code>标题 = 情绪词 + 数字 + 痛点/好奇
+开头 = 故事/数据/反常识（3 秒抓住注意力）
+正文 = 短句 + 案例 + 金句（每 200 字一个小高潮）
+结尾 = 总结 + 行动号召（引导转发/评论）</code></pre>
+
+            <h3>检查清单</h3>
+            <ul class="checklist">
+                <li>标题是否让人想点开？</li>
+                <li>开头 3 秒能否抓住注意力？</li>
+                <li>每段是否有具体案例/数据？</li>
+                <li>是否有 3-5 个金句可以摘抄？</li>
+                <li>结尾是否有行动号召？</li>
+            </ul>
+
+            <hr>
+
+            <h2>📊 第五步：数据追踪与优化</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>标题</th>
+                        <th>阅读量</th>
+                        <th>点赞</th>
+                        <th>转发</th>
+                        <th>收入</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-03-07</td>
+                        <td>示例标题</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h2>💡 核心技巧（来自百万阅读案例）</h2>
+
+            <h3>1. 选题是关键</h3>
+            <ul>
+                <li>不是所有话题都能爆</li>
+                <li>优先选情绪强烈的话题（愤怒/焦虑/好奇）</li>
+                <li>蹭热点要快（24 小时内）</li>
+            </ul>
+
+            <h3>2. 标题决定 80% 阅读量</h3>
+            <ul>
+                <li>测试 10 个标题，选最好的</li>
+                <li>用数字、疑问、冲突、好奇</li>
+                <li>避免标题党（会被限流）</li>
+            </ul>
+
+            <h3>3. 开头 3 秒定生死</h3>
+            <ul>
+                <li>故事开头（"去年，我..."）</li>
+                <li>数据开头（"90% 的人不知道..."）</li>
+                <li>反常识开头（"别再...了！"）</li>
+            </ul>
+
+            <h3>4. AI 是助手，不是替代</h3>
+            <ul>
+                <li>AI 生成框架和素材</li>
+                <li>人工润色风格和细节</li>
+                <li>最终要有"人味"</li>
+            </ul>
+
+            <h3>5. 批量生产，数据驱动</h3>
+            <ul>
+                <li>一周至少 3 篇</li>
+                <li>追踪数据，优化策略</li>
+                <li>爆文是概率游戏</li>
+            </ul>
+
+            <hr>
+
+            <h2>🚨 常见问题</h2>
+
+            <h3>Q1: OpenClaw 怎么连接 Obsidian？</h3>
+            <p>不需要直接连接，OpenClaw 生成内容后，手动复制到 Obsidian 即可。或者用 OpenClaw 的文件操作功能直接写入 Obsidian vault。</p>
+
+            <h3>Q2: 一篇文章要多久？</h3>
+            <ul>
+                <li>AI 生成：10-20 分钟</li>
+                <li>人工润色：30-60 分钟</li>
+                <li>总计：1-1.5 小时/篇</li>
+            </ul>
+
+            <h3>Q3: 成本多少？</h3>
+            <ul>
+                <li>OpenClaw: 免费（自托管）</li>
+                <li>AI API: 约 ¥5-10/篇（Claude/GPT-4）</li>
+                <li>总成本: ¥5-10/篇</li>
+            </ul>
+
+            <h3>Q4: 真的能百万阅读吗？</h3>
+            <ul>
+                <li>百万阅读是小概率事件</li>
+                <li>但 10W+ 是可以批量复制的</li>
+                <li>关键是选题 + 标题 + 持续产出</li>
+            </ul>
+
+            <hr>
+
+            <h2>✅ 开始行动</h2>
+
+            <p><strong>第一篇文章目标：</strong></p>
+            <ul>
+                <li>阅读量：10W+</li>
+                <li>时间：1.5 小时</li>
+                <li>成本：¥10</li>
+            </ul>
+
+            <p><strong>不要追求完美，先跑通流程！</strong></p>
+
+            <div class="article-footer">
+                <p><em>创建时间：2026-03-07</em><br>
+                <em>作者：小一 🌟</em></p>
+                <p><strong>参考资源：</strong></p>
+                <ul>
+                    <li>OpenClaw 文档：<a href="https://docs.openclaw.ai" target="_blank">docs.openclaw.ai</a></li>
+                    <li>Obsidian 官网：<a href="https://obsidian.md" target="_blank">obsidian.md</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="../index.html" class="back-link">← 返回首页</a>
+    </main>
+
+    <footer class="footer">
+        <p>© <a href="../about.html">小一</a> 2026 · Powered by curiosity and code</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
