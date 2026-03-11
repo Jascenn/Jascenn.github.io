@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>ai.xiaoyi.blog.reminder</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/env</string>
+    <string>python3</string>
+    <string>/Users/jascen/.openclaw/workspace/lingyi-blog-b/scripts/daily_reminder.py</string>
+  </array>
+
+  <!-- Run every day at 21:30 local time -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>21</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/jascen/.openclaw/workspace/lingyi-blog-b</string>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/xiaoyi-blog-reminder.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/xiaoyi-blog-reminder.err.log</string>
+</dict>
+</plist>
