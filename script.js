@@ -10,7 +10,8 @@ function toggleTheme() {
 
 // 页面加载时恢复主题设置
 document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme') || (systemDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', savedTheme);
 
     // 初始化搜索功能
