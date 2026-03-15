@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw 演讲稿 · 凌一</title>
+<style>
+body { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; font-family: -apple-system, sans-serif; line-height: 1.8; color: #222; }
+h1 { font-size: 1.5rem; margin: 32px 0 8px; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; color: #333; border-left: 4px solid #6c63ff; padding-left: 12px; }
+hr { border: none; border-top: 1px solid #eee; margin: 24px 0; }
+pre { background: #f5f5f5; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; }
+code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; }
+strong { color: #111; }
+p { margin: 6px 0; }
+</style>
+</head>
+<body>
+<h1>OpenClaw 入门演讲稿</h1>
+<p><strong>《给自己配一个真正的 AI 助手》</strong></p>
+<p>演讲者：凌一 | 时长参考：约 20-30 分钟</p>
+<br>
+<hr>
+<br>
+<h2>第1页 · 封面</h2>
+<br>
+<p>大家好，我是凌一。</p>
+<br>
+<p>今天我想跟大家聊一件事——我们每天都在用 AI，但你有没有觉得，这些 AI 工具用起来总差点意思？</p>
+<br>
+<p>今天我要介绍的这个东西，叫 OpenClaw。它让我第一次觉得，AI 真的是"我的"了。</p>
+<br>
+<hr>
+<br>
+<h2>第2页 · 你有没有这些烦恼？</h2>
+<br>
+<p>我先问大家几个问题：</p>
+<br>
+<p>- 你有没有跟 ChatGPT 聊了半天，第二天打开，它完全不记得你说过什么？</p>
+<p>- 你有没有想在手机上用 AI，但只能打开网页，很麻烦？</p>
+<p>- 你有没有担心过，自己跟 AI 说的那些私密的事，都存在别人的服务器上？</p>
+<br>
+<p>（停顿，让观众点头）</p>
+<br>
+<p>对，这就是现在大多数 AI 工具的现状。</p>
+<br>
+<hr>
+<br>
+<h2>第3页 · 现有 AI 工具的3个问题</h2>
+<br>
+<p>总结一下，现有工具有三个核心问题：</p>
+<br>
+<p><strong>第一，没有记忆。</strong> 每次对话都是从零开始，你得反复介绍自己，反复解释背景。</p>
+<br>
+<p><strong>第二，渠道单一。</strong> 只能在特定的网页或 App 里用，不够灵活。</p>
+<br>
+<p><strong>第三，隐私风险。</strong> 你的数据全在别人的服务器上，你没有控制权。</p>
+<br>
+<p>这三个问题，OpenClaw 全部解决了。</p>
+<br>
+<hr>
+<br>
+<h2>第4页 · OpenClaw 是什么？</h2>
+<br>
+<p>OpenClaw 是什么？</p>
+<br>
+<p>我喜欢用一个类比来解释：</p>
+<br>
+<p>你想象一下，现在的 AI 就像一个很聪明的人，但他每天都失忆，只能在一个固定的房间里见你，而且他住在别人家。</p>
+<br>
+<p>OpenClaw 做的事情，就是给这个 AI——</p>
+<br>
+<p>- 装上一个<strong>大脑</strong>，让它记住你</p>
+<p>- 给它一个<strong>身体</strong>，让它能在各种地方找到你</p>
+<p>- 给它一个<strong>家</strong>，就在你自己的设备上</p>
+<br>
+<p>简单说：OpenClaw 是一个开源框架，让你在自己的设备上部署、管理、扩展 AI 助手。</p>
+<br>
+<hr>
+<br>
+<h2>第5页 · 它能做什么？</h2>
+<br>
+<p>说几个真实场景：</p>
+<br>
+<p>- 早上起来，在 Telegram 问它"今天天气怎么样，要带伞吗？"</p>
+<p>- 下午开会前，它主动提醒你"你有个会议还有20分钟"</p>
+<p>- 晚上你说"帮我把今天的工作总结一下"，它直接给你写好</p>
+<p>- 你在飞书群里 @ 它，它帮你查资料、整理信息</p>
+<p>- 它记得你上周说要写一篇文章，今天主动问你"写了吗？"</p>
+<br>
+<p>这些，都是真实可以做到的。</p>
+<br>
+<hr>
+<br>
+<h2>第6页 · 多渠道接入</h2>
+<br>
+<p>OpenClaw 支持的渠道非常多：Telegram、微信、飞书、Discord、iMessage、Slack……</p>
+<br>
+<p>你在哪，它就在哪。</p>
+<br>
+<p>就像你有一个朋友，不管你发微信还是发短信，他都能收到，都能回你。</p>
+<br>
+<hr>
+<br>
+<h2>第7页 · 记忆系统</h2>
+<br>
+<p>这是我最喜欢的功能。</p>
+<br>
+<p>OpenClaw 有一套持久化记忆系统。它会记住你的名字、你的习惯、你说过的事、你的偏好。</p>
+<br>
+<p>重启也不会忘。</p>
+<br>
+<p>我自己用了一段时间之后，它已经知道我喜欢简洁的回答、知道我在做自媒体、知道我的工作节奏。</p>
+<br>
+<p>这种感觉，才叫"我的 AI 助手"。</p>
+<br>
+<hr>
+<br>
+<h2>第8页 · 技能系统</h2>
+<br>
+<p>OpenClaw 有一个技能系统，就像手机的 App Store。</p>
+<br>
+<p>你可以给它安装各种技能：天气查询、文档助手、视频摘要、代码助手……</p>
+<br>
+<p>安装方式也很简单，一行命令：</p>
+<pre><code>clawhub install 技能名
+<p></code></pre></p>
+<br>
+<p>社区里已经有很多现成的技能，你也可以自己写。</p>
+<br>
+<hr>
+<br>
+<h2>第9页 · 多 Agent</h2>
+<br>
+<p>更厉害的是，OpenClaw 支持多个 AI 助手同时运行。</p>
+<br>
+<p>你可以设置一个"个人助手"处理日常事务，一个"工作助手"专门处理工作，一个"研究助手"帮你查资料……</p>
+<br>
+<p>不同任务交给不同的专家，效率翻倍。</p>
+<br>
+<hr>
+<br>
+<h2>第10页 · 隐私安全</h2>
+<br>
+<p>很多人问我：数据安全吗？</p>
+<br>
+<p>OpenClaw 是本地部署的。你的数据，在你自己的电脑或服务器上，不经过任何第三方。</p>
+<br>
+<p>你说的每一句话，都只有你自己知道。</p>
+<br>
+<hr>
+<br>
+<h2>第11页 · 安装有多简单？</h2>
+<br>
+<p>好，说了这么多，安装难不难？</p>
+<br>
+<p>三步，5分钟：</p>
+<br>
+<pre><code># 第一步：安装
+<p>npm install -g openclaw</p>
+<br>
+<h1>第二步：初始化</h1>
+<p>openclaw onboard --install-daemon</p>
+<br>
+<h1>第三步：启动</h1>
+<p>openclaw gateway start</p>
+<p></code></pre></p>
+<br>
+<p>就这样，你的 AI 助手就跑起来了。</p>
+<br>
+<p>（停顿）</p>
+<br>
+<p>不需要会编程，不需要懂服务器，跟着文档走就行。</p>
+<br>
+<hr>
+<br>
+<h2>第12页 · 真实案例：小明的一天</h2>
+<br>
+<p>让我讲一个故事。</p>
+<br>
+<p>小明是一个普通上班族，用 OpenClaw 一个月了。</p>
+<br>
+<p>早上8点，他在 Telegram 问"今天北京天气"，AI 告诉他要带伞。</p>
+<br>
+<p>中午12点，AI 提醒他"下午2点有个周会"。</p>
+<br>
+<p>晚上10点，他说"帮我写今天的工作日报"，AI 根据他今天的对话记录，直接生成了一份日报草稿。</p>
+<br>
+<p>小明说：感觉多了一个随时在线的助理。</p>
+<br>
+<hr>
+<br>
+<h2>第13页 · 团队协作</h2>
+<br>
+<p>OpenClaw 不只是个人用。</p>
+<br>
+<p>我们团队现在用飞书，有人用 Telegram，有人用 Discord。</p>
+<br>
+<p>但大家都在问同一个 AI 助手，它统一处理，统一回答。</p>
+<br>
+<p>一个 AI，服务整个团队。</p>
+<br>
+<hr>
+<br>
+<h2>第14页 · 小白最担心的3件事</h2>
+<br>
+<p>我知道大家可能还有顾虑，我来直接回答：</p>
+<br>
+<p><strong>Q：需要会编程吗？</strong></p>
+<p>A：不需要。三行命令，跟着文档走就行。</p>
+<br>
+<p><strong>Q：要花很多钱吗？</strong></p>
+<p>A：OpenClaw 本身完全开源免费。你只需要付 AI 模型的 API 费用，用多少付多少，一般每月几十块钱。</p>
+<br>
+<p><strong>Q：会不会很难维护？</strong></p>
+<p>A：基本不用管。它会自动运行，出问题有社区支持。</p>
+<br>
+<hr>
+<br>
+<h2>第15页 · 总结</h2>
+<br>
+<p>今天讲了这么多，核心就四点：</p>
+<br>
+<p>✅ <strong>不再被遗忘</strong> — AI 记得你是谁</p>
+<p>✅ <strong>随时随地交互</strong> — 在哪个 App 都能用</p>
+<p>✅ <strong>完全属于你</strong> — 数据在自己手里</p>
+<p>✅ <strong>越用越懂你</strong> — 持续学习你的习惯</p>
+<br>
+<p>这才是真正属于你的 AI 助手。</p>
+<br>
+<hr>
+<br>
+<h2>第16页 · 结尾</h2>
+<br>
+<p>好，最后。</p>
+<br>
+<p>如果你今天只记住一件事，记住这个：</p>
+<br>
+<pre><code>npm install -g openclaw
+<p></code></pre></p>
+<br>
+<p>文档：docs.openclaw.ai</p>
+<p>社区：discord.com/invite/clawd</p>
+<p>代码：github.com/openclaw/openclaw</p>
+<br>
+<p>有问题随时来找我，我是凌一，谢谢大家。</p>
+<br>
+<hr>
+<br>
+<p>*演讲稿 by 凌一*</p>
+<br>
+</body>
+</html>
