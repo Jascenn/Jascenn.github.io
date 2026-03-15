@@ -87,7 +87,7 @@ for (let i = 1; i <= total; i++) {
   const div = document.createElement('div');
   div.className = 'slide-item';
   div.innerHTML = `
-    <img src="slide-${num}-text.png" alt="第 ${i} 页" loading="${i <= 3 ? 'eager' : 'lazy'}">
+    <img src="style-final-slide-${num}.png" alt="第 ${i} 页" loading="${i <= 3 ? 'eager' : 'lazy'}">
     <span class="slide-num">${i} / ${total}</span>
   `;
   container.appendChild(div);
