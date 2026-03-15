@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw 入门教程 - 凌一</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #111; font-family: sans-serif; }
+.header { text-align: center; padding: 32px 16px 16px; color: #fff; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header p { color: #888; font-size: 0.85rem; margin-top: 6px; }
+.slides { max-width: 900px; margin: 0 auto; padding: 16px; }
+.slide { margin-bottom: 24px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+.slide img { width: 100%; display: block; }
+.slide-num { text-align: center; color: #555; font-size: 0.75rem; padding: 8px; }
+.footer { text-align: center; padding: 32px; color: #555; font-size: 0.8rem; }
+.nav { text-align: center; padding: 12px; }
+.nav a { color: #888; text-decoration: none; margin: 0 12px; font-size: 0.85rem; }
+.nav a:hover { color: #fff; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>OpenClaw 入门教程</h1>
+  <p>给自己配一个真正的 AI 助手 · 凌一</p>
+</div>
+<div class="nav">
+  <a href="index.html">← 技术介绍版</a>
+  <a href="https://jascenn.github.io">博客首页</a>
+</div>
+<div class="slides" id="slides"></div>
+<div class="footer">凌一 · <a href="https://jascenn.github.io" style="color:#555">jascenn.github.io</a></div>
+<script>
+const container = document.getElementById('slides');
+for (let i = 1; i <= 16; i++) {
+  const num = String(i).padStart(2, '0');
+  container.innerHTML += `
+    <div class="slide">
+      <img src="tutorial-slide-${num}.png?v=1" alt="第 ${i} 页" loading="${i <= 3 ? 'eager' : 'lazy'}">
+    </div>
+    <div class="slide-num">${i} / 16</div>`;
+}
+</script>
+</body>
+</html>
