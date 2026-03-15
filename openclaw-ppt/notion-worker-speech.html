@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion Worker 演讲稿 · 凌一</title>
+<style>
+:root { --bg:#0f0f0f; --surface:#1a1a1a; --border:#2a2a2a; --text:#e8e8e8; --muted:#888; --accent:#a78bfa; --code-bg:#1e1e2e; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif; font-size:16px; line-height:1.9; padding:32px 20px 80px; max-width:740px; margin:0 auto; }
+h1 { font-size:1.6rem; font-weight:700; color:#fff; margin:40px 0 4px; }
+h2 { font-size:1.05rem; font-weight:600; color:var(--accent); margin:36px 0 12px; padding-left:14px; border-left:3px solid var(--accent); }
+p { color:#ccc; margin:6px 0; font-size:0.97rem; }
+strong { color:#fff; font-weight:600; }
+hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
+pre { background:var(--code-bg); border:1px solid var(--border); border-radius:10px; padding:16px 20px; margin:12px 0; overflow-x:auto; }
+code { font-family:"SF Mono","Fira Code",monospace; font-size:0.88rem; color:#a5f3fc; line-height:1.7; }
+p code { background:var(--code-bg); padding:2px 7px; border-radius:5px; color:#a5f3fc; font-size:0.85rem; }
+.nav { margin-bottom:24px; }
+.nav a { color:#666; text-decoration:none; margin-right:16px; font-size:0.82rem; }
+.nav a:hover { color:#fff; }
+</style>
+</head>
+<body>
+<div class="nav"><a href="notion-worker-speech.html">Worker 演讲稿</a><a href="notion-agent-speech.html">Agent 演讲稿</a><a href="speech.html">OpenClaw 演讲稿</a></div>
+<h1>Notion Worker 演讲稿</h1>
+<p><strong>《让 Notion 自动帮你干活》</strong></p>
+<p>演讲者：凌一 | 时长参考：约 20-30 分钟</p>
+<br>
+<hr>
+<br>
+<h2>第1页 · 封面</h2>
+<br>
+<p>大家好，我是凌一。</p>
+<br>
+<p>今天我要聊的话题，是很多人用了 Notion 好几年，但从来没发现的一个玩法——让 Notion 自动帮你干活。</p>
+<br>
+<p>不是你去操作 Notion，而是 Notion 自己动起来。</p>
+<br>
+<hr>
+<br>
+<h2>第2页 · 你现在怎么用 Notion？</h2>
+<br>
+<p>我先问大家，你现在用 Notion 做什么？</p>
+<br>
+<p>记笔记？做清单？管项目？</p>
+<br>
+<p>大多数人用 Notion，其实只用了它 10% 的能力。</p>
+<br>
+<p>剩下 90%，藏在 API、自动化、数据库联动里。今天我们就来解锁这部分。</p>
+<br>
+<hr>
+<br>
+<h2>第3页 · 什么是 Notion Worker？</h2>
+<br>
+<p>Notion Worker，我喜欢用一个类比来解释：</p>
+<br>
+<p>你雇了一个员工，这个员工不需要休息，不会忘事，24小时在线，专门帮你处理 Notion 里的重复性工作。</p>
+<br>
+<p>它能做什么？自动整理、自动更新、自动提醒、自动生成报告。</p>
+<br>
+<p>你只需要告诉它规则，剩下的它来做。</p>
+<br>
+<hr>
+<br>
+<h2>第4页 · Worker 能做什么？</h2>
+<br>
+<p>具体来说，Notion Worker 有五个核心能力：</p>
+<br>
+<p>- 📝 <strong>自动整理笔记</strong> — 新内容进来，自动分类归档</p>
+<p>- 📊 <strong>自动更新数据库</strong> — 状态变化，自动同步</p>
+<p>- 🔔 <strong>自动发送提醒</strong> — 任务快到期，自动通知你</p>
+<p>- 📋 <strong>自动生成报告</strong> — 周报、月报，自动汇总</p>
+<p>- 🔗 <strong>自动同步其他工具</strong> — 和 Gmail、Slack、日历打通</p>
+<br>
+<hr>
+<br>
+<h2>第5页 · 真实场景1：会议记录自动归档</h2>
+<br>
+<p>让我讲一个真实场景。</p>
+<br>
+<p>你开完会，把会议记录粘贴到 Notion。</p>
+<br>
+<p>然后呢？Worker 自动帮你：</p>
+<p>- 提取关键决策</p>
+<p>- 识别待办事项，分配给对应的人</p>
+<p>- 归档到对应的项目页面</p>
+<br>
+<p>你什么都不用做，会议记录自动就整理好了。</p>
+<br>
+<hr>
+<br>
+<h2>第6页 · 真实场景2：周报自动生成</h2>
+<br>
+<p>每周五写周报，是很多人最头疼的事。</p>
+<br>
+<p>有了 Worker，你不用再手动写了。</p>
+<br>
+<p>它会自动扫描你这周的任务记录、完成情况、遇到的问题，汇总成一份周报草稿。</p>
+<br>
+<p>你只需要看一眼，改几个字，发出去。</p>
+<br>
+<hr>
+<br>
+<h2>第7页 · 真实场景3：数据库自动打标签</h2>
+<br>
+<p>你有一个内容库，每次新增一篇文章，都要手动打标签——主题、类型、状态……</p>
+<br>
+<p>很烦对吧？</p>
+<br>
+<p>Worker 可以自动识别内容，自动打上对应的标签。</p>
+<br>
+<p>你只管往里加内容，标签的事交给它。</p>
+<br>
+<hr>
+<br>
+<h2>第8页 · 真实场景4：任务到期自动提醒</h2>
+<br>
+<p>你在 Notion 里设了截止日期，但经常忘了看。</p>
+<br>
+<p>Worker 会自动检测快到期的任务，提前发消息提醒你——可以是 Telegram、邮件、或者任何你常用的渠道。</p>
+<br>
+<p>再也不会因为忘了看 Notion 而错过 deadline。</p>
+<br>
+<hr>
+<br>
+<h2>第9页 · 怎么搭建？3步上手</h2>
+<br>
+<p>好，说了这么多，怎么搭建？</p>
+<br>
+<p>三步：</p>
+<br>
+<p><strong>第一步：</strong> 获取 Notion API Token（在 Notion 设置里，5分钟搞定）</p>
+<br>
+<p><strong>第二步：</strong> 选择一个自动化工具（Zapier、Make 或 n8n，下一页讲怎么选）</p>
+<br>
+<p><strong>第三步：</strong> 配置触发器和动作（什么时候触发，触发后做什么）</p>
+<br>
+<p>就这三步，你的第一个 Notion Worker 就跑起来了。</p>
+<br>
+<hr>
+<br>
+<h2>第10页 · 常用工具怎么选？</h2>
+<br>
+<p>三个主流工具，我来帮你选：</p>
+<br>
+<p>- <strong>Zapier</strong> — 最简单，上手最快，但贵，适合预算充足的小白</p>
+<p>- <strong>Make（原 Integromat）</strong> — 性价比最高，可视化流程，我最推荐</p>
+<p>- <strong>n8n</strong> — 完全免费，可自托管，但需要一点技术基础</p>
+<br>
+<p>大多数人，我建议从 <strong>Make</strong> 开始。</p>
+<br>
+<hr>
+<br>
+<h2>第11页 · 零代码方案</h2>
+<br>
+<p>很多人一听"API"就怕了，觉得需要会编程。</p>
+<br>
+<p>不需要。</p>
+<br>
+<p>Make 的界面是可视化的，你用拖拽的方式连接各个模块，就像搭积木一样。</p>
+<br>
+<p>Notion 模块 → 条件判断 → 执行动作</p>
+<br>
+<p>不写一行代码，照样能搭出强大的自动化流程。</p>
+<br>
+<hr>
+<br>
+<h2>第12页 · 避坑指南</h2>
+<br>
+<p>踩过坑才知道，有三件事要注意：</p>
+<br>
+<p><strong>第一，API 调用频率别超限。</strong> Notion API 有速率限制，自动化太频繁会被限流。</p>
+<br>
+<p><strong>第二，先在测试环境跑通。</strong> 别直接在正式数据库上测试，先用一个测试页面验证逻辑。</p>
+<br>
+<p><strong>第三，错误处理要设好。</strong> 自动化失败了要有通知，不然你不知道它挂了。</p>
+<br>
+<hr>
+<br>
+<h2>第13页 · 费用怎么算？</h2>
+<br>
+<p>很多人担心费用，我来算一下：</p>
+<br>
+<p>- <strong>Notion API</strong>：免费</p>
+<p>- <strong>Make</strong>：免费套餐每月 1000 次操作，够大多数个人用户用</p>
+<p>- <strong>Zapier</strong>：免费套餐每月 100 次，稍微少一点</p>
+<br>
+<p>基本上，个人用户免费就够了。团队用户付费也不贵，每月几十块钱。</p>
+<br>
+<hr>
+<br>
+<h2>第14页 · 进阶玩法：多数据库联动</h2>
+<br>
+<p>当你玩熟了基础自动化，可以试试多数据库联动。</p>
+<br>
+<p>比如：项目数据库 + 任务数据库 + 人员数据库，三个库互相打通。</p>
+<br>
+<p>新建一个项目，自动创建对应的任务列表，自动分配给对应的人，自动设置截止日期。</p>
+<br>
+<p>这才是 Notion 真正强大的地方。</p>
+<br>
+<hr>
+<br>
+<h2>第15页 · 总结</h2>
+<br>
+<p>今天讲了这么多，核心就四点：</p>
+<br>
+<p>✅ <strong>重复工作自动化</strong> — 不再手动做重复的事</p>
+<p>✅ <strong>数据自动整理</strong> — 信息自动分类归档</p>
+<p>✅ <strong>提醒不再遗漏</strong> — 重要事项自动通知</p>
+<p>✅ <strong>效率翻倍</strong> — 把时间花在真正重要的事上</p>
+<br>
+<hr>
+<br>
+<h2>第16页 · 结尾</h2>
+<br>
+<p>好，最后。</p>
+<br>
+<p>今天回去，做一件事：</p>
+<br>
+<p>1. 申请 Notion API Token</p>
+<p>2. 注册一个 Make 账号</p>
+<p>3. 搭建你的第一个自动化流程</p>
+<br>
+<p>从最简单的开始，比如"新增一条记录，自动发一条 Telegram 消息"。</p>
+<br>
+<p>跑通了，你就入门了。</p>
+<br>
+<p>我是凌一，谢谢大家。</p>
+<br>
+<hr>
+<br>
+<p>*演讲稿 by 凌一*</p>
+<br>
+</body>
+</html>

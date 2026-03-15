@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion AI Agent 演讲稿 · 凌一</title>
+<style>
+:root { --bg:#0f0f0f; --surface:#1a1a1a; --border:#2a2a2a; --text:#e8e8e8; --muted:#888; --accent:#a78bfa; --code-bg:#1e1e2e; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif; font-size:16px; line-height:1.9; padding:32px 20px 80px; max-width:740px; margin:0 auto; }
+h1 { font-size:1.6rem; font-weight:700; color:#fff; margin:40px 0 4px; }
+h2 { font-size:1.05rem; font-weight:600; color:var(--accent); margin:36px 0 12px; padding-left:14px; border-left:3px solid var(--accent); }
+p { color:#ccc; margin:6px 0; font-size:0.97rem; }
+strong { color:#fff; font-weight:600; }
+hr { border:none; border-top:1px solid var(--border); margin:28px 0; }
+pre { background:var(--code-bg); border:1px solid var(--border); border-radius:10px; padding:16px 20px; margin:12px 0; overflow-x:auto; }
+code { font-family:"SF Mono","Fira Code",monospace; font-size:0.88rem; color:#a5f3fc; line-height:1.7; }
+p code { background:var(--code-bg); padding:2px 7px; border-radius:5px; color:#a5f3fc; font-size:0.85rem; }
+.nav { margin-bottom:24px; }
+.nav a { color:#666; text-decoration:none; margin-right:16px; font-size:0.82rem; }
+.nav a:hover { color:#fff; }
+</style>
+</head>
+<body>
+<div class="nav"><a href="notion-worker-speech.html">Worker 演讲稿</a><a href="notion-agent-speech.html">Agent 演讲稿</a><a href="speech.html">OpenClaw 演讲稿</a></div>
+<h1>Notion AI Agent 演讲稿</h1>
+<p><strong>《让 Notion 学会自己思考》</strong></p>
+<p>演讲者：凌一 | 时长参考：约 20-30 分钟</p>
+<br>
+<hr>
+<br>
+<h2>第1页 · 封面</h2>
+<br>
+<p>大家好，我是凌一。</p>
+<br>
+<p>上一场我们聊了 Notion Worker——让 Notion 自动执行任务。</p>
+<br>
+<p>今天我们升级一下，聊聊 Notion AI Agent——让 Notion 学会自己思考。</p>
+<br>
+<p>这是一个更有意思的话题。</p>
+<br>
+<hr>
+<br>
+<h2>第2页 · Worker 和 Agent 有什么区别？</h2>
+<br>
+<p>先说清楚两者的区别，很多人搞混。</p>
+<br>
+<p><strong>Worker</strong> 是执行者。你告诉它"每周五生成周报"，它就每周五生成。规则固定，不会变通。</p>
+<br>
+<p><strong>Agent</strong> 是决策者。你告诉它"帮我管好这个项目"，它会自己分析情况，自己决定做什么，自己调整策略。</p>
+<br>
+<p>一个是按指令做事，一个是自主判断。</p>
+<br>
+<hr>
+<br>
+<h2>第3页 · 什么是 Notion AI Agent？</h2>
+<br>
+<p>Notion AI Agent，我用一个类比：</p>
+<br>
+<p>你有一个助理，这个助理不只是帮你执行任务，还会主动读你的笔记，理解你的工作状态，主动提出建议，甚至在你没想到的时候提醒你该做什么。</p>
+<br>
+<p>这就是 Agent 和 Worker 最大的区别——<strong>主动性</strong>。</p>
+<br>
+<hr>
+<br>
+<h2>第4页 · Agent 能做什么？</h2>
+<br>
+<p>Notion AI Agent 有五个核心能力：</p>
+<br>
+<p>- 🧠 <strong>分析任务优先级</strong> — 自动判断什么最重要</p>
+<p>- 📋 <strong>自动生成项目计划</strong> — 输入目标，自动拆解步骤</p>
+<p>- 💡 <strong>主动提出建议</strong> — 读懂你的笔记，给出行动建议</p>
+<p>- 🔍 <strong>跨数据库自主决策</strong> — 综合多个数据库做判断</p>
+<p>- 📝 <strong>读懂你的意图</strong> — 不只是执行，而是理解</p>
+<br>
+<hr>
+<br>
+<h2>第5页 · 真实场景1：AI 分析任务优先级</h2>
+<br>
+<p>你的任务列表里有20件事，你不知道先做哪个。</p>
+<br>
+<p>Agent 会自动分析：截止日期、重要程度、任务之间的依赖关系，然后给你排出一个优先级列表。</p>
+<br>
+<p>不是随机排，是真正基于逻辑的判断。</p>
+<br>
+<hr>
+<br>
+<h2>第6页 · 真实场景2：自动生成项目计划</h2>
+<br>
+<p>你在 Notion 里写了一句话："做一个 AI 工具的产品介绍页"。</p>
+<br>
+<p>Agent 读到这句话，自动帮你拆解成：</p>
+<p>- 竞品调研（3天）</p>
+<p>- 内容框架（1天）</p>
+<p>- 文案撰写（2天）</p>
+<p>- 设计配图（2天）</p>
+<p>- 发布上线（1天）</p>
+<br>
+<p>并且自动填入你的项目数据库，设好截止日期。</p>
+<br>
+<hr>
+<br>
+<h2>第7页 · 真实场景3：AI 读懂笔记主动建议</h2>
+<br>
+<p>你最近在 Notion 里记了很多关于 AI 工具的笔记，但都是零散的。</p>
+<br>
+<p>Agent 读完这些笔记，主动跟你说：</p>
+<br>
+<p>"你最近研究了很多 AI 工具，要不要整理成一篇文章？我帮你列个大纲。"</p>
+<br>
+<p>这种主动性，才是 Agent 最有价值的地方。</p>
+<br>
+<hr>
+<br>
+<h2>第8页 · 真实场景4：跨数据库自主决策</h2>
+<br>
+<p>你有三个数据库：项目库、人员库、资源库。</p>
+<br>
+<p>来了一个新任务，Agent 同时查看三个库，自动判断：</p>
+<br>
+<p>"这个任务适合张三做，因为他这周任务最少，而且有相关经验。"</p>
+<br>
+<p>然后自动分配，自动通知张三。</p>
+<br>
+<p>这就是跨库自主决策。</p>
+<br>
+<hr>
+<br>
+<h2>第9页 · Agent 的4个核心组件</h2>
+<br>
+<p>要理解 Agent，需要知道它的四个核心组件：</p>
+<br>
+<p>- 🧠 <strong>记忆</strong> — 长期记忆（你的偏好、历史）+ 短期记忆（当前任务上下文）</p>
+<p>- 🔧 <strong>工具</strong> — 能调用的 API、数据库、外部服务</p>
+<p>- 📋 <strong>规划</strong> — 把大目标拆解成小步骤</p>
+<p>- ⚡ <strong>执行</strong> — 调用工具，完成每个步骤</p>
+<br>
+<p>这四个组件组合在一起，就是一个完整的 Agent。</p>
+<br>
+<hr>
+<br>
+<h2>第10页 · 怎么搭建？</h2>
+<br>
+<p>搭建 Notion AI Agent，需要三层：</p>
+<br>
+<p><strong>底层：Notion 数据库</strong> — 存储你的数据和上下文</p>
+<br>
+<p><strong>中层：LLM（大语言模型）</strong> — Claude 或 GPT，负责理解和推理</p>
+<br>
+<p><strong>上层：Agent 框架</strong> — 负责协调记忆、工具、规划、执行</p>
+<br>
+<p>三层搭起来，Agent 就跑起来了。</p>
+<br>
+<hr>
+<br>
+<h2>第11页 · 推荐方案怎么选？</h2>
+<br>
+<p>三个主流方案：</p>
+<br>
+<p>- <strong>OpenClaw</strong> — 开源、自托管、我最推荐，和 Notion 集成很好</p>
+<p>- <strong>LangChain</strong> — 最灵活，但需要写代码，适合开发者</p>
+<p>- <strong>Dify</strong> — 可视化界面，适合不想写代码的人</p>
+<br>
+<p>如果你是小白，从 <strong>Dify</strong> 开始；如果你想要完全控制，用 <strong>OpenClaw</strong>。</p>
+<br>
+<hr>
+<br>
+<h2>第12页 · 避坑指南</h2>
+<br>
+<p>Agent 有三件事最容易出问题：</p>
+<br>
+<p><strong>第一，给 Agent 设边界。</strong> 别让它有权限修改重要数据，先给只读权限，测试稳定了再开放写权限。</p>
+<br>
+<p><strong>第二，先小范围测试。</strong> 在一个测试数据库里跑，确认逻辑正确再上正式环境。</p>
+<br>
+<p><strong>第三，保留人工审核环节。</strong> 重要决策，让 Agent 给出建议，但最终由你来确认。</p>
+<br>
+<hr>
+<br>
+<h2>第13页 · 费用与成本</h2>
+<br>
+<p>很多人担心费用，我来算一下：</p>
+<br>
+<p>- <strong>Notion</strong>：免费或 $8/月</p>
+<p>- <strong>LLM API</strong>：按用量，个人用户每月大概 $5-20</p>
+<p>- <strong>Agent 框架</strong>：OpenClaw 开源免费，Dify 有免费套餐</p>
+<br>
+<p>总体来说，每月 $10-30 就能跑一个不错的 Notion AI Agent。</p>
+<br>
+<p>比雇一个助理便宜 100 倍。</p>
+<br>
+<hr>
+<br>
+<h2>第14页 · 未来趋势</h2>
+<br>
+<p>我们现在处于 AI Agent 的早期阶段。</p>
+<br>
+<p>2023年，大家开始用 ChatGPT 这样的 AI 工具。</p>
+<p>2024年，AI Agent 开始兴起，能自主完成任务。</p>
+<p>2025年，多个 Agent 协作，处理复杂工作流。</p>
+<p>未来，Agent 会成为每个人工作的标配。</p>
+<br>
+<p>你现在学的，是未来的基础技能。</p>
+<br>
+<hr>
+<br>
+<h2>第15页 · 总结</h2>
+<br>
+<p>今天讲了这么多，核心就四点：</p>
+<br>
+<p>✅ <strong>AI 主动帮你思考</strong> — 不只是执行，而是判断</p>
+<p>✅ <strong>自动生成计划</strong> — 目标输入，步骤自动拆解</p>
+<p>✅ <strong>跨库智能决策</strong> — 综合信息，自主判断</p>
+<p>✅ <strong>越用越懂你</strong> — 持续学习你的工作方式</p>
+<br>
+<hr>
+<br>
+<h2>第16页 · 结尾</h2>
+<br>
+<p>好，最后。</p>
+<br>
+<p>今天回去，做一件事：</p>
+<br>
+<p>1. 连接你的 Notion API</p>
+<p>2. 接入一个 LLM（Claude 或 GPT）</p>
+<p>3. 配置你的第一个 Agent，让它帮你分析今天的任务优先级</p>
+<br>
+<p>从最简单的开始，跑通了，你就入门了。</p>
+<br>
+<p>AI Agent 不是未来，是现在。</p>
+<br>
+<p>我是凌一，谢谢大家。</p>
+<br>
+<hr>
+<br>
+<p>*演讲稿 by 凌一*</p>
+<br>
+</body>
+</html>
