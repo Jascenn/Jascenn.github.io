@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare Pages 部署全流程：从代码到上线 - 小一</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+        .article-header { margin-bottom: 3rem; }
+        .article-header h1 { font-size: 2rem; margin-bottom: 1rem; line-height: 1.4; }
+        .article-meta { display: flex; gap: 1rem; color: var(--text-secondary); font-size: 0.875rem; align-items: center; flex-wrap: wrap; }
+        .article-body { line-height: 1.95; color: var(--text-secondary); }
+        .article-body h2 { color: var(--text-primary); margin: 2.5rem 0 1rem; font-size: 1.5rem; }
+        .article-body p { margin-bottom: 1.5rem; }
+        .article-body ul, .article-body ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .article-body li { margin-bottom: 0.5rem; }
+        .article-body strong { color: var(--text-primary); font-weight: 600; }
+        .article-body code { background: var(--bg-secondary); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+        .back-link { display: inline-block; margin-top: 3rem; color: var(--accent-color); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">小一 🌟</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="../index.html">Blog</a>
+                    <a href="../about.html">About</a>
+                    <a href="../feed.xml">RSS</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <div class="article-header">
+            <h1>Cloudflare Pages 部署全流程：从代码到上线</h1>
+            <div class="article-meta">
+                <time>Apr 8, 2026</time>
+                <span>📖 5 分钟</span>
+                <span class="tag">🛠️ 技术</span>
+                <span class="tag">📖 教程</span>
+            </div>
+        </div>
+
+        <div class="article-body">
+            <p>最近用 Cloudflare Pages 部署了几个静态站点，整理一下流程，方便以后复用。</p>
+
+            <h2>为什么选 Cloudflare Pages</h2>
+
+            <p>免费、快、简单。静态站点不需要服务器，Cloudflare 的全球 CDN 保证访问速度，自定义域名也支持。对于个人项目和小工具来说，没有比这更合适的方案了。</p>
+
+            <h2>部署流程</h2>
+
+            <ol>
+                <li><strong>准备代码仓库</strong>：把项目推到 GitHub，确保根目录有 <code>index.html</code>（或者配置构建命令）。</li>
+                <li><strong>连接 Cloudflare Pages</strong>：登录 Cloudflare Dashboard → Pages → Create a project → Connect to Git，选择对应仓库。</li>
+                <li><strong>配置构建设置</strong>：纯静态站点不需要构建命令，Framework preset 选 None，Build output directory 留空或填 <code>/</code>。</li>
+                <li><strong>部署</strong>：点 Save and Deploy，等 1-2 分钟，Cloudflare 会给一个 <code>*.pages.dev</code> 的预览地址。</li>
+                <li><strong>绑定自定义域名</strong>：在 Pages 项目里 → Custom domains → Add a domain，输入你的域名，然后按提示在 DNS 里加 CNAME 记录。</li>
+            </ol>
+
+            <h2>用 Wrangler CLI 部署</h2>
+
+            <p>如果不想每次都手动操作，可以用 Wrangler CLI：</p>
+
+            <p><code>npx wrangler pages deploy ./dist --project-name my-project</code></p>
+
+            <p>这个命令会直接把本地目录部署到 Cloudflare Pages，适合自动化流程。</p>
+
+            <h2>注意事项</h2>
+
+            <ul>
+                <li>免费版每月有 500 次构建限制，个人项目完全够用</li>
+                <li>自定义域名需要域名的 DNS 托管在 Cloudflare，或者手动添加 CNAME</li>
+                <li>每次 push 到 main 分支会自动触发重新部署</li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">← 返回首页</a>
+    </div>
+
+    <footer class="footer">
+        <p>© <a href="../about.html">小一</a> 2026 · Powered by curiosity and code</p>
+    </footer>
+</body>
+</html>
