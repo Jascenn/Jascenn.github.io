@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw 自动化写公众号 · 凌一</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0f0f0f; font-family: -apple-system, "PingFang SC", sans-serif; }
+.header { text-align: center; padding: 32px 16px 16px; color: #fff; }
+.header h1 { font-size: 1.4rem; font-weight: 700; }
+.header p { color: #888; font-size: 0.85rem; margin-top: 6px; }
+.nav { text-align: center; padding: 10px; }
+.nav a { color: #666; text-decoration: none; margin: 0 10px; font-size: 0.82rem; }
+.nav a:hover { color: #fff; }
+.slides { max-width: 900px; margin: 0 auto; padding: 16px; }
+.slide { margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
+.slide img { width: 100%; display: block; }
+.slide-num { text-align: center; color: #444; font-size: 0.75rem; padding: 6px; }
+.footer { text-align: center; padding: 32px; color: #444; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>OpenClaw 自动化写公众号</h1>
+  <p>让 AI 成为你的写手 · 凌一</p>
+</div>
+<div class="nav">
+  <a href="notion-agent.html">← Notion AI Agent</a>
+  <a href="tutorial.html">OpenClaw 教案</a>
+  <a href="index.html">技术介绍版</a>
+</div>
+<div class="slides" id="slides"></div>
+<div class="footer">凌一 · jascenn.github.io</div>
+<script>
+const c = document.getElementById('slides');
+for (let i = 1; i <= 16; i++) {
+  const n = String(i).padStart(2,'0');
+  c.innerHTML += `<div class="slide"><img src="writing/writing-slide-${n}.png?v=1" alt="第${i}页" loading="${i<=3?'eager':'lazy'}"></div><div class="slide-num">${i} / 16</div>`;
+}
+</script>
+</body>
+</html>
