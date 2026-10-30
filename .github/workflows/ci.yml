@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Validate feed XML
         run: python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('feed.xml'); print('feed.xml OK')"
