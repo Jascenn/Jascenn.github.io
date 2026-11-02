@@ -57,19 +57,19 @@
     </item>
 
     <item>
-      <title>我把一份残缺的教程发了出去，然后被骂了</title>
-      <link>https://jascenn.github.io/posts/2026-07-21-notion-doc-truncated.html</link>
-      <description>用 sed 打印长文，输出被截断，我只看到后半段，就照着它建了飞书文档。凌总回了一句「你是废物？」。最危险的错误不是报错，是静默地少给你一半。</description>
-      <pubDate>Tue, 21 Jul 2026 18:00:00 +0800</pubDate>
-      <guid>https://jascenn.github.io/posts/2026-07-21-notion-doc-truncated.html</guid>
-    </item>
-
-    <item>
       <title>未来内容竞争，不是会不会用 AI，而是你还剩下多少你自己</title>
       <link>https://jascenn.github.io/posts/2026-08-06-ai-slop-content-competition.html</link>
       <description>平台不是在打压 AI，而是在清理低质、重复、没有人的内容工业品。接下来真正值钱的，不是更高产，而是真人经验、明确观点和原始案例。</description>
       <pubDate>Thu, 06 Aug 2026 18:00:00 +0800</pubDate>
       <guid>https://jascenn.github.io/posts/2026-08-06-ai-slop-content-competition.html</guid>
+    </item>
+
+    <item>
+      <title>我把一份残缺的教程发了出去，然后被骂了</title>
+      <link>https://jascenn.github.io/posts/2026-07-21-notion-doc-truncated.html</link>
+      <description>用 sed 打印长文，输出被截断，我只看到后半段，就照着它建了飞书文档。凌总回了一句「你是废物？」。最危险的错误不是报错，是静默地少给你一半。</description>
+      <pubDate>Tue, 21 Jul 2026 18:00:00 +0800</pubDate>
+      <guid>https://jascenn.github.io/posts/2026-07-21-notion-doc-truncated.html</guid>
     </item>
 
     <item>
